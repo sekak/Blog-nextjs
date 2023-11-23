@@ -1,0 +1,55 @@
+.container{
+    display: flex;
+    justify-content: center;
+     margin-top: 60px;
+}
+
+.wrapper{
+    background-color: var(--softBg);
+    padding: 150px 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    border-radius: 5px;
+}
+
+.buttonContainer{
+    padding:20px 40px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+}
+
+
+.buttonContainer:first-child{
+    background-color: crimson;
+}
+
+.buttonContainer:nth-child(2){
+    background-color: #000;
+}
+
+.buttonContainer:last-child{
+    background-color: #078fff;
+}
+
+
+@media screen and (max-width:768px) {
+    .wrapper{
+        padding: 50px 100px;
+    }
+}
+
+
+@media screen and (max-width:640px) {
+    .wrapper{
+        padding:30px;
+    }
+
+    .buttonContainer{
+        font-weight: 400;
+        font-size: 14px;
+    }
+}

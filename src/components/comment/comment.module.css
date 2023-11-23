@@ -1,0 +1,60 @@
+.container{
+    margin-top: 50px;
+}
+
+.title{
+    color: var(--softTextColor);
+    margin-bottom: 30px;
+}
+
+.write{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.textarea{
+    width: 100%;
+    padding: 18px;
+}
+
+.button{
+    font-weight: bold;
+    background-color: teal;
+    border: none;
+    padding: 10px 15px;
+    color: white;
+    border-radius: 5px;
+}
+
+
+/* comments */
+
+.comments{
+    margin-top: 50px;
+}
+
+.comment{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.user{
+    display: flex;
+    gap: 13px;
+    align-items: center;
+}
+
+.infoUser{
+    color: var(--softTextColor);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.image{
+    border-radius: 50%;
+}

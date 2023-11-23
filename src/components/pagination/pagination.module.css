@@ -1,0 +1,18 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.button{
+    background-color: crimson;
+    padding: 10px 20px;
+    border:none;
+    color: white;
+     cursor: pointer;
+}
+ 
+.block{
+    background-color: rgb(90, 1, 19);
+    cursor: not-allowed;
+}

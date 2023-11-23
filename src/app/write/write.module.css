@@ -1,0 +1,66 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 55px;
+}
+
+.title{
+    background-color: transparent;
+    border: none;
+    padding: 50px;
+    font-size: 60px;
+    color: var(--softText);
+    outline: none;
+}
+
+.title::placeholder{
+    color: var(--softText);
+    letter-spacing: 2px;
+}
+
+.editor{
+    display: flex;
+    gap: 20px;
+}
+
+.buttons{
+    display: flex;
+    gap: 20px;
+}
+
+.button, .addButton{
+    background-color: transparent;
+    cursor: pointer;
+    border:1px solid gray;
+    border-radius: 50%;
+    display: flex;
+    padding: 12px;
+}
+
+.addButton{
+    border-color: #1a8917;
+}
+
+ 
+
+.editor > .addButton{
+    margin-right: 100px;
+
+}
+
+.reactquill{
+    width: 100%;
+}
+
+.post{
+    position: absolute;
+    top: 25px;
+    right: 50px;
+    display: flex;
+    color: var(--softText);
+    background-color: #1a891a;
+    border-radius: 20px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}

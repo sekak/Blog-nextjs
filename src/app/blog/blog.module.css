@@ -1,0 +1,11 @@
+.title{
+    color: white;
+    background-color: coral;
+    text-align: center;
+    padding:10px 0px;
+    text-transform: capitalize;
+}
+.wrap{
+    display: flex;
+    gap: 40px;
+}

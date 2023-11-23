@@ -1,0 +1,73 @@
+.container{
+    margin-top: 50px;
+}
+
+
+/* main element */
+.infoContainer{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+/* section  text */
+.textContainer{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+     gap:60px;
+}
+
+.title{
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.user{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.image{
+    border-radius: 50%;
+}
+
+.username{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 14px;
+    color: var(--softTextColor);
+}
+
+/* section  image */
+.imgContainer{
+    flex: 1;
+    position: relative;
+    height: 400px;
+}
+
+.imageContainer
+{
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+
+/* post */
+.content{
+    display: flex;
+     gap: 50px;
+}
+
+.post{
+    flex: 5;
+    margin-top: 50px;
+}
+
+.description p{
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 25px;
+}

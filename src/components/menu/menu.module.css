@@ -1,0 +1,142 @@
+.container{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.titles{
+    padding: 50px 0px;
+}
+
+.subtitle{
+    font-size: 18px;
+    color: gray;
+    font-weight: 400;
+ 
+}
+
+.items{
+     display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.item{
+ 
+    display: flex;
+     gap: 20px;
+}
+
+.img{
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.post{
+    font-weight: 500;
+    font-size: 18px;
+    color: var(--softTextColor);
+}
+
+.textContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.details
+{
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.date{
+    color: var(--softTextColor);
+}
+ 
+
+.category{
+    font-size: 13px;
+    padding: 4px 10px;
+    border-radius: 13px;
+    color: white;
+    font-size: 14px;
+}
+
+.category.travel{
+    background-color: rgba(255, 91, 32, 0.845);
+    width: max-content;
+}
+
+.category.culture{
+    background-color: rgba(238, 183, 1, 0.824);
+    width: max-content;
+}
+
+.category.food{
+    background-color: rgba(32, 215, 0, 0.809);
+    width: max-content;
+}
+
+.category.fashion{
+    background-color: rgba(216, 2, 127, 0.816);
+    width: max-content;
+}
+
+.cat{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.cat.culture{
+    background-color: #7fb88133;
+    padding:10px 20px;
+    border-radius: 5px;
+}
+
+.cat.style{
+    background-color: #57c4ff31;
+    padding:10px 20px;
+    border-radius: 5px;
+}
+
+.cat.food{
+    background-color: #da85c731;
+    padding:10px 20px;
+    border-radius: 5px;
+}
+
+.cat.travel{
+    background-color: #ff795736;
+    padding:10px 20px;
+    border-radius: 5px;
+}
+
+.cat.fashion{
+    background-color:  #ffb04f45;
+    padding:10px 20px;
+    border-radius: 5px;
+}
+
+.cat.coding{
+    background-color:  #5e4fff31;
+    padding:10px 20px;
+    border-radius: 5px;
+}
+
+
+/* .category.fashion{
+    background-color: #5e4fff31;
+}
+.category.coding{
+    background-color: #7fb88133;
+} */
+
+
+@media screen and (max-width:1024px) {
+    .container{
+        display: none;
+    }
+}
