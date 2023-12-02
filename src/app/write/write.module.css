@@ -34,7 +34,7 @@
     display: flex;
 }
 
-.button,
+.button, 
 .addButton {
     background-color: transparent;
     cursor: pointer;
