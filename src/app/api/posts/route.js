@@ -12,7 +12,8 @@ export const GET = async (req) => {
   const query = {
     take: POST_PER_PAGE,
     skip: (POST_PER_PAGE * (page - 1)),
-    where: {
+    where: 
+    {
       ...(cat && { catSlug: cat })
     }
   }

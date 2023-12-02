@@ -1,66 +1,95 @@
-.container{
+.container {
     display: flex;
     flex-direction: column;
     gap: 55px;
 }
 
-.title{
+.title {
     background-color: transparent;
     border: none;
-    padding: 50px;
+    margin-top: 50px;
+    /* padding: 50px; */
     font-size: 60px;
     color: var(--softText);
     outline: none;
 }
 
-.title::placeholder{
+.title::placeholder {
     color: var(--softText);
     letter-spacing: 2px;
 }
 
-.editor{
+.editor {
     display: flex;
     gap: 20px;
 }
 
-.buttons{
+.buttons {
     display: flex;
     gap: 20px;
+    justify-content: space-between;
 }
 
-.button, .addButton{
+.left {
+    display: flex;
+}
+
+.button,
+.addButton {
     background-color: transparent;
     cursor: pointer;
-    border:1px solid gray;
+    border: 1px solid gray;
     border-radius: 50%;
     display: flex;
-    padding: 12px;
+    /* padding: 12px; */
 }
 
-.addButton{
+.addButton {
     border-color: #1a8917;
 }
 
- 
 
-.editor > .addButton{
+
+.editor>.addButton {
     margin-right: 100px;
 
 }
 
-.reactquill{
+.reactquill {
     width: 100%;
 }
 
-.post{
+
+
+.post {
     position: absolute;
     top: 25px;
     right: 50px;
     display: flex;
-    color: var(--softText);
+    color: white;
     background-color: #1a891a;
     border-radius: 20px;
     padding: 10px 20px;
     border: none;
     cursor: pointer;
+}
+
+@media screen and (max-width:1640px) {
+    .post {
+        top: 125px;
+        right: 50px;
+    }
+}
+
+.showImg {
+    width: 200px;
+    height: 200px;
+    background-color: rgb(73, 73, 73);
+    border-radius: 2px;
+}
+
+.imgShow {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }

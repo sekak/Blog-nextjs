@@ -1,6 +1,7 @@
 import Pagination from '../pagination/Pagination'
 import style from './cardList.module.css'
 import Card from '../card/Card'
+import Link from 'next/link'
  
  
 
