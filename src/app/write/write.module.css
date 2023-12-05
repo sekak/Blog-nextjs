@@ -13,7 +13,7 @@
     color: var(--softText);
     outline: none;
 }
-
+ 
 .title::placeholder {
     color: var(--softText);
     letter-spacing: 2px;
@@ -26,22 +26,28 @@
 
 .buttons {
     display: flex;
-    gap: 20px;
+    gap: 25px;
     justify-content: space-between;
-}
+ }
 
 .left {
     display: flex;
 }
 
+.img{
+ 
+}
+ 
 .button, 
 .addButton { 
-    background-color: transparent;
+     background-color: transparent;
     cursor: pointer;
     border: 1px solid gray;
-    border-radius: 50%;
     display: flex;
-    /* padding: 12px; */
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 12px;  
 }
 
 .addButton {
