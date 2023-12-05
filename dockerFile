@@ -1,0 +1,12 @@
+FROM ubuntu:latest
+
+RUN mkdir -p ./home/blog
+
+WORKDIR  ./home/blog
+
+
+COPY . . 
+
+RUN npm i 
+
+CMD [ "npm run dev" ]
