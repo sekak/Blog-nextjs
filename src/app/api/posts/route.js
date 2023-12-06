@@ -34,14 +34,14 @@ export const GET = async (req) => {
 export const POST = async (req) => {
 
   const session =await getAuthSession()
-     console.log("=>>>",session.user)
+    //  console.log("=>>>",session.user)
   try{
     const body = await req.json()
     console.log(body)
     const res = await prisma.post.create({
       data: {...body ,userEmail: session.user.email}
     })
-    console.log("====>>>>>>.<<<<<<======")
+    // console.log("====>>>>>>.<<<<<<======")
      return new NextResponse(
       JSON.stringify(res, { status: 200 })
     );
