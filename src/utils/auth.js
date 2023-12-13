@@ -19,8 +19,7 @@ export const authOptions = {
         School({
             clientId: process.env.FORTYTWO_CLIENT_ID,
             clientSecret: process.env.FORTYTWO_CLIENT_SECRET,
-            secondSecret: process.env.FORTYTWO_SECOND_SECRET,  
-         }),
+        }),
     ],
 }
 

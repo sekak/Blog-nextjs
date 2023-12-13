@@ -16,7 +16,7 @@ export const GET = async (req) => {
       }
     )
 
-    return new NextResponse(JSON.stringify(comment, { status: 200 }));
+    return new NextResponse(JSON.stringify(comment.reverse(), { status: 200 }));
   }catch(err)
   {
     return new NextResponse(
@@ -29,7 +29,7 @@ export const GET = async (req) => {
 // CREATE A COMMENT
 export const POST = async (req) => {
 
-  const session =await  getAuthSession();
+  const session = await  getAuthSession();
  
   try {
     const body = await req.json();

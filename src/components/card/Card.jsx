@@ -6,7 +6,7 @@ const Card = ({ item }) => {
     return (
         <div className={style.container}>
            {item?.img && <div className={style.imgContainer}>
-                <Image className={style.img} src={item?.img} alt='post' fill />
+                <Image className={style.img} src={item?.img} alt='' fill />
             </div>}
             <div className={style.textContainer}>
                 <div className={style.details}>

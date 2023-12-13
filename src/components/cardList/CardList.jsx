@@ -10,24 +10,28 @@ const getData = async ({page,cat}) => {
   const res = await fetch(`http://localhost:3000/api/posts?page=${page}&cat=${cat || ""}`, { cache: "no-store" })
   if (!res.ok)
     throw new Error("Something is went wrang");
+   
   return res.json()
 }
 
 
 const CardList = async ({page, cat}) => {
    const {data,count} = (await getData({page,cat}));
+  
    console.log(data)
    return (
     <div className={style.container}>
       <h1 className={style.title}>Recent Posts</h1>
       <div className={style.posts}>
-        {
+        {data ?
           data?.map((item)=>{
-            return <Card key={item._id} item={item}/>
-          })
+            return <Card key={item._id} item={item} />
+          }) : (
+            <div style={{fontWeight:100 , color:"red"}}>Not Post Available</div>
+          )
         }
       </div>
-      <Pagination page={page} count={count} cat={cat}/>
+      <Pagination page={page} count={count} cat={cat} data={data}/>
      </div>
   )
 

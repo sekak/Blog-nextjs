@@ -58,3 +58,9 @@
 .image{
     border-radius: 50%;
 }
+
+/* block submit */
+.block{
+    background-color: rgb(90, 1, 19);
+    cursor: not-allowed;
+}

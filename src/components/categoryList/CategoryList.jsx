@@ -3,14 +3,17 @@ import style from './categoryList.module.css'
 import Link from 'next/link'
 
 const getData = async ()=>{
-  const res = await fetch(`http://localhost:3000/api/categories?page=1`,{cache:"no-store"})
-  if(!res.ok)
-    throw new Error("Can't get data from categories")
-  return res.json()
+  let  open = 1;
+  const res = await fetch(`http://localhost:3000/api/categories`,{cache:"no-store"})
+  if(res.ok)
+    return res.json();
+ 
+    return  null;
 }
 
 const CategoryList = async () => {
   const data  = await getData()
+ 
   // console.log(data)
 
   return (
@@ -18,7 +21,7 @@ const CategoryList = async () => {
       <h1 className={style.title}>Popular Categories</h1>
       <div className={style.categories}>
        
-        {
+        {data ?
           data.map((item)=>{
             return(
               <Link key={item.title} href={`/blog?cat=${item.title}&page=1`} className={`${style.category} ${style[item.title]}`}>
@@ -26,7 +29,11 @@ const CategoryList = async () => {
               {item.title}
             </Link>
             )
-          })
+          }) : (
+            <h3 style={{fontWeight:"100", color:"red"}}>
+              Not Found Categories List
+            </h3>
+          )
         }        
       </div>
     </div>

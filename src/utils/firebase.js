@@ -14,4 +14,27 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
- export default app = initializeApp(firebaseConfig);
+ export const app = initializeApp(firebaseConfig);
+
+ 
+
+ // Import the functions you need from the SDKs you need
+// import { initializeApp } from "firebase/app";
+//  // TODO: Add SDKs for Firebase products that you want to use
+// // https://firebase.google.com/docs/web/setup#available-libraries
+
+// // Your web app's Firebase configuration
+// // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+// const firebaseConfig = {
+//   apiKey: "AIzaSyA7V0bMl3mw-ELpsN0SRQvFMv6DgMlO1kI",
+//   authDomain: "blog-83765.firebaseapp.com",
+//   projectId: "blog-83765",
+//   storageBucket: "blog-83765.appspot.com",
+//   messagingSenderId: "756834342422",
+//   appId: "1:756834342422:web:38d30b46ee8dee4ab08737",
+//   measurementId: "G-2BRRND0KMJ"
+// };
+
+// // Initialize Firebase
+// export const app = initializeApp(firebaseConfig);
+ 

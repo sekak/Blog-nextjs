@@ -14,7 +14,7 @@ export default function Home({ searchParams }) {
       <Feature />
       <CategoryList />
       <div className={style.content}>
-        <CardList page={page}/>
+         <CardList page={page}/> 
         <Menu />
       </div>
     </div>
