@@ -5,8 +5,9 @@ import { createContext, useEffect, useState } from "react";
 export const ThemeContext = createContext();
 
 const getFromLocalStorage = () => {
-    const value = localStorage.getItem("theme")
-    return value || "light";
+    if (typeof window != 'undefined')
+        return localStorage.getItem("theme") || "light"
+    return "light";
 }
 
 export const ThemeContextProvider = ({ children }) => {
