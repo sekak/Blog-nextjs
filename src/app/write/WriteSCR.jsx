@@ -22,12 +22,10 @@ const WriteSCR = () => {
     const [title, setTitle] = useState("")
     const [type, setType] = useState(null)
     const [error, setError] = useState(false)
-    const storage = getStorage(app)
-
+    
     useEffect(() => {
-
-
         const upload = () => {
+            const storage = getStorage(app)
             const storageRef = ref(storage, file?.name);
             uploadBytes(storageRef, file).then((snapshot) => {
                 console.log('Uploaded a blob or file!');
@@ -105,7 +103,7 @@ const WriteSCR = () => {
                         </Stack>
                     </div>}
             </div>
-            {file && <div className={style.showImg}><img src={media} id="#blah" className={style.imgShow} /></div>}
+            {file && <div className={style.showImg}><Image src={media} id="#blah" alt='' className={style.imgShow} /></div>}
             <ReactQuill className={style.reactquill} theme="snow" value={value} onChange={setValue} placeholder='Tell your story...' />
             <button type='submit' className={style.post} onClick={(e) => handleClick(e)}>Publish</button>
         </div>
