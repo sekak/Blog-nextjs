@@ -17,7 +17,7 @@ const Pagination = ({ page, count, cat ,data}) => {
   const [block1, setBlock1] = useState(false)
   const [name, setName] = useState("")
 
-  console.log(ref)
+  // console.log(ref)
 
   useEffect(() => {
        if (href == "blog" && name == "prev" && data) {
@@ -25,21 +25,21 @@ const Pagination = ({ page, count, cat ,data}) => {
         step == 1 ? setBlock(true) : setBlock(false);
         setBlock1(false)
         step != 1 && route.push(`/${ref}&page=${step - 1}`)
-        step != 1 && setSteps(step - 1);
+        step != 1 && setSteps(s => s - 1);
       }
       else if (href != "blog" && name == "prev" && data) { // prev // no blog // right
         console.log("prev no blog left")
         step == 1 ? setBlock(true) : setBlock(false);
         setBlock1(false)
         step != 1 && route.push(`/?page=${step - 1}`)
-        step != 1 && setSteps(step - 1);
+        step != 1 && setSteps(s => s - 1);
       }
       else if (href == "blog" && name == "next" && data) // next //  blog // right
       {
         console.log("manyStep")
         step != manyStep && route.push(`/${ref}&page=${step + 1}`)
         step == manyStep - 1 ? setBlock1(true) : setBlock1(false);
-        step != manyStep && setSteps(step + 1);
+        step != manyStep && setSteps(s => s + 1);
       }
       else if (href != "blog" && name == "next" && data) { // next // no blog // right
         console.log("next right no blog")
@@ -47,7 +47,7 @@ const Pagination = ({ page, count, cat ,data}) => {
         step == manyStep - 1 ? setBlock1(true) : setBlock1(false);
         setBlock(false)
         step != manyStep && route.push(`/?page=${step + 1}`)
-        step != manyStep && setSteps(step + 1);
+        step != manyStep && setSteps(s => s + 1);
       }
       setName("")
 
