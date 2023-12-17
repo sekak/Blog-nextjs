@@ -11,7 +11,7 @@ const Pagination = ({ page, count, cat ,data}) => {
   const route = useRouter()
 
   const PER_LENGTH_PAGE = 2 // how cart want to show in front
-  const manyStep = Math.ceil(count / PER_LENGTH_PAGE) // how step can do it  
+  const manyStep = Math.ceil(count ? count / PER_LENGTH_PAGE : 0) // how step can do it  
   const [step, setSteps] = useState(1) // first step
   const [block, setBlock] = useState(false)
   const [block1, setBlock1] = useState(false)
@@ -51,9 +51,8 @@ const Pagination = ({ page, count, cat ,data}) => {
       }
       setName("")
 
-  }, [href, name])
-
-
+  }, [href, name, manyStep,ref,route,step,data])
+ 
 
   return (
     <div className={style.container}>
