@@ -19,14 +19,14 @@ const Comment = ({params}) => {
 
     const fetcher = (url) => fetch(url).then((res) => res.json());
     const { data , mutate } = useSWR(
-        `${process.env.PATH}/api/comment?postSlug=${params}`,
+        `${process.env.PATH_ORIGIN}/api/comment?postSlug=${params}`,
         fetcher
     );
 
 
     const handleClick = async () => {
 
-        await fetch(`${process.env.PATH}/api/comment?postSlug=${params}`, {
+        await fetch(`${process.env.PATH_ORIGIN}/api/comment?postSlug=${params}`, {
             method: "POST",
             body: JSON.stringify({ desc, postSlug: params }),
         });
