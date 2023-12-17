@@ -3,8 +3,8 @@ import style from './categoryList.module.css'
 import Link from 'next/link'
 
 const getData = async ()=>{
-  let  open = 1;
-  const res = await fetch(`http://localhost:3000/api/categories`,{cache:"no-store"})
+  
+  const res = await fetch(`${process.env.PATH}/api/categories`,{cache:"no-store"})
   if(res.ok)
     return res.json();
  

@@ -9,9 +9,9 @@ import useSWR from "swr";
 
 
 
-const Comment = () => {
-    const params = window.location.pathname.split('/')[2]
-    // console.log(params)
+const Comment = ({params}) => {
+    // if (typeof window !== "undefined") 
+    // console.log("location ++++++===> ", window.location.href);    // console.log(params)
     // const [data, setData] = useState([])
     const [desc, setDesc] = useState(null)
     const [click, setClick] = useState(0)
@@ -19,14 +19,14 @@ const Comment = () => {
 
     const fetcher = (url) => fetch(url).then((res) => res.json());
     const { data , mutate } = useSWR(
-        `http://localhost:3000/api/comment?postSlug=${params}`,
+        `${process.env.PATH}/api/comment?postSlug=${params}`,
         fetcher
     );
 
 
     const handleClick = async () => {
 
-        await fetch(`http://localhost:3000/api/comment?postSlug=${params}`, {
+        await fetch(`${process.env.PATH}/api/comment?postSlug=${params}`, {
             method: "POST",
             body: JSON.stringify({ desc, postSlug: params }),
         });

@@ -2,12 +2,15 @@ import Pagination from '../pagination/Pagination'
 import style from './cardList.module.css'
 import Card from '../card/Card'
 import Link from 'next/link'
- 
+  
  
 
 const getData = async ({page,cat}) => {
+   
 
-  const res = await fetch(`http://localhost:3000/api/posts?page=${page}&cat=${cat || ""}`, { cache: "no-store" })
+  // if (typeof window !== "undefined") 
+  // console.log("location ++++++===> ", window.location.href);  
+  const res = await fetch(`${process.env.PATH}/api/posts?page=${page}&cat=${cat || ""}`, { cache: "no-store" })
   if (!res.ok)
     throw new Error("Something is went wrang");
    
