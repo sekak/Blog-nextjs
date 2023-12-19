@@ -17,7 +17,7 @@ const Write = async () => {
     const  location   = await getAuthSession();
  
     if(!session)
-    redirect('/')
+        redirect('/')
     
     return(
         <div>

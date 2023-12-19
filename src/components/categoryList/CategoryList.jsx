@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 const getData = async ()=>{
   
-  const res = await fetch(`${process.env.PATH_ORIGIN}/api/categories`,{cache:"no-store"})
+  const res = await fetch(`${process.env.NEXTAUTH_URL}/api/categories`,{cache:"no-store"})
   if(res.ok)
     return res.json();
  
