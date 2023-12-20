@@ -9,7 +9,7 @@ import useSWR from "swr";
 
 
 
-const Comment = ({params}) => {
+const Comment = ({param}) => {
    
     const [desc, setDesc] = useState(null)
     const [click, setClick] = useState(0)
@@ -17,16 +17,16 @@ const Comment = ({params}) => {
 
     const fetcher = (url) => fetch(url).then((res) => res.json());
     const { data , mutate } = useSWR(
-        `${process.env.NEXTAUTH_URL}/api/comment?postSlug=${params}`,
+        `${process.env.NEXTAUTH_URL}/api/comment?postSlug=${param}`,
         fetcher
     );
 
 
     const handleClick = async () => {
 
-        await fetch(`${process.env.NEXTAUTH_URL}/api/comment?postSlug=${params}`, {
+        await fetch(`${process.env.NEXTAUTH_URL}/api/comment?postSlug=${param}`, {
             method: "POST",
-            body: JSON.stringify({ desc, postSlug: params }),
+            body: JSON.stringify({ desc, postSlug: param }),
         });
         mutate()
         document.getElementById("#id").value = ""
