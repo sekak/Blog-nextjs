@@ -21,7 +21,6 @@ const Comment = ({param}) => {
         fetcher
     );
 
-
     const handleClick = async () => {
 
         await fetch(`${process.env.NEXTAUTH_URL}/api/comment?postSlug=${param}`, {
