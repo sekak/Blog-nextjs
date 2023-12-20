@@ -10,9 +10,7 @@ import useSWR from "swr";
 
 
 const Comment = ({params}) => {
-    // if (typeof window !== "undefined") 
-    // console.log("location ++++++===> ", window.location.href);    // console.log(params)
-    // const [data, setData] = useState([])
+   
     const [desc, setDesc] = useState(null)
     const [click, setClick] = useState(0)
     const { status } = useSession()
@@ -59,7 +57,7 @@ const Comment = ({params}) => {
                     </div>
                 </div>
             )) : (<div style={{ marginTop: "100px" }}> No comment yet ... </div>)}
-        </div>
+        </div> 
     )
 }
 
