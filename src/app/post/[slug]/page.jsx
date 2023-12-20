@@ -6,7 +6,7 @@ import Image from 'next/image'
 
 const getData = async (params) => {
     // console.log("Sddddddd",params)
-    const res = await fetch(`${process.env.PATH_ORIGIN}/api/posts/${params}`, { cache: "no-store" })
+    const res = await fetch(`${process.env.NEXTAUTH_URL}/api/posts/${params}`, { cache: "no-store" })
     if (!res.ok)
         throw new Error("Something is went wrang");
     return res.json()

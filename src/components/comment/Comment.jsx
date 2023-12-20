@@ -16,14 +16,16 @@ const Comment = ({param}) => {
     const { status } = useSession()
 
     const fetcher = (url) => fetch(url).then((res) => res.json());
+    console.log("AUTH URL", process.env.NEXTAUTH_URL)
     const { data , mutate } = useSWR(
-        `${process.env.NEXTAUTH_URL}/api/comment?postSlug=${param}`,
+        // console.log(`${process.env.NEXTAUTH_URL}/api/comment?postSlug=${param}`)
+        `/api/comment?postSlug=${param}`,
         fetcher
     );
 
     const handleClick = async () => {
 
-        await fetch(`${process.env.NEXTAUTH_URL}/api/comment?postSlug=${param}`, {
+        await fetch(`/api/comment?postSlug=${param}`, {
             method: "POST",
             body: JSON.stringify({ desc, postSlug: param }),
         });
