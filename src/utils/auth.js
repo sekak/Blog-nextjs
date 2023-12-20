@@ -1,5 +1,5 @@
-import GithubProvider from "next-auth/providers/github"
-import GoogleProvider from "next-auth/providers/google";
+ import GoogleProvider from "next-auth/providers/google";
+ import FacebookProvider from "next-auth/providers/facebook";
 import School from "next-auth/providers/42-school";
 import { PrismaAdapter } from "@auth/prisma-adapter"
 import prisma from "./connect"
@@ -12,9 +12,9 @@ export const authOptions = {
             clientId: process.env.GOOGLE_ID,
             clientSecret: process.env.GOOGLE_SECRET,
         }),
-        GithubProvider({
-            clientId: process.env.GITHUB_ID,
-            clientSecret: process.env.GITHUB_SECRET,
+        FacebookProvider({
+            clientId: process.env.FACEBOOK_CLIENT_ID,
+            clientSecret: process.env.FACEBOOK_CLIENT_SECRET
         }),
         School({
             clientId: process.env.FORTYTWO_CLIENT_ID,

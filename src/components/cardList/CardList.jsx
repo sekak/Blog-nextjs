@@ -6,10 +6,7 @@ import Link from 'next/link'
  
 
 const getData = async ({page,cat}) => {
-   
-
-  // if (typeof window !== "undefined") 
-  // console.log("location ++++++===> ", window.location.href);  
+ 
   const res = await fetch(`${process.env.NEXTAUTH_URL}/api/posts?page=${page}&cat=${cat || ""}`, { cache: "no-store" })
   if (!res.ok)
     throw new Error("Something is went wrang");
