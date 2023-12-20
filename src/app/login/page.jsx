@@ -20,7 +20,7 @@ const Login = () => {
         <div className={style.container}>
             <div className={style.wrapper}>
                 <button className={style.buttonContainer} onClick={()=> signIn("google")}>Sign in with Google</button>
-                <button className={style.buttonContainer} onClick={()=> signIn("42-school")}>Sign in with Github</button>
+                <button className={style.buttonContainer} onClick={()=> signIn("github")}>Sign in with Github</button>
                 <button className={style.buttonContainer} onClick={()=> signIn("facebook")}>Sign in with Facebook</button>
             </div>
         </div>
