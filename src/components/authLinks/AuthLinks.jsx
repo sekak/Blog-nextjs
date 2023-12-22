@@ -26,15 +26,15 @@ const AuthLinks = () => {
       {
         open && (
           <div className={`${style.responsive} ${open && scroll}`}>
-            <Link href='/' className={style.menu}>Homepage</Link>
-            <Link href='/' className={style.menu}>Contact</Link>
-            <Link href='/' className={style.menu}>About</Link>
+            <Link href='/' onClick={()=>setOpen(false)} className={style.menu}>Homepage</Link>
+            <Link href='/' onClick={()=>setOpen(false)} className={style.menu}>Contact</Link>
+            <Link href='/' onClick={()=>setOpen(false)} className={style.menu}>About</Link>
             {
               status === "unauthenticated" ?
-                (<Link href="/login">Login</Link>) :
+                (<Link href="/login" onClick={()=>setOpen(false)}>Login</Link>) :
                 (<>
-                  <Link href='/write'>Write</Link>
-                  <span className={style.link}>Logout</span>
+                  <Link href='/write' onClick={()=>setOpen(false)}>Write</Link>
+                  <span   onClick={()=>setOpen(false)}>Logout</span>
                 </>)
             }
           </div>

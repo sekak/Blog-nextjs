@@ -19,6 +19,7 @@
  
 
 .responsive{
+    z-index:999;
     bottom:0px;
     position: absolute;
     height: calc(100vh - 69.5px);

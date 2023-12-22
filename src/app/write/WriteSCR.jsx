@@ -96,16 +96,17 @@ const WriteSCR = () => {
                         </button>
                     </div>
                 }
-                {error &&
-                    <div transition-style="in:wipe:left">
-                        <Stack sx={{ width: '100%' }} spacing={2}>
-                            <Alert severity="error">This is an error alert — check it out!</Alert>
-                        </Stack>
-                    </div>}
+                
             </div>
             {file && <div className={style.showImg}><Image src={media} id="#blah" alt='' className={style.imgShow} /></div>}
             <ReactQuill className={style.reactquill} theme="snow" value={value} onChange={setValue} placeholder='Tell your story...' />
             <button type='submit' className={style.post} onClick={(e) => handleClick(e)}>Publish</button>
+            {error &&
+                    <div transition-style="in:wipe:left" className="warning">
+                        <Stack sx={{ width: '100%'  }} spacing={2}>
+                            <Alert severity="error">This is an error alert — check it out!</Alert>
+                        </Stack>
+                    </div>}
         </div>
     )
 }
